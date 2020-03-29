@@ -1,0 +1,14 @@
+<h1>Fulfillment Center Details</h1>
+
+<div class="row">
+  <div class="col-md-12">
+    <h4>Name</h4>
+    <p><%= @center.name %></p>
+    <h4>Address</h4>
+    <p><%= @center.address %> <br>
+    <%= "#{@center.city}, #{@center.state} #{@center.zip}" %>
+    </p>
+    <h4>Phone</h4>
+    <p><%= @center.phone %></p>
+  </div>
+</div>

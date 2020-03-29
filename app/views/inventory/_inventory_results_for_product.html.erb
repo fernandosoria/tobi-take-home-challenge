@@ -1,0 +1,19 @@
+<% if inventories %>
+<table class="table table-striped">
+  <tr>
+    <th>Fulfillment Center</th>
+    <th>Location</th>
+    <th>Count</th>
+    <th>Edit</th>
+  </tr>
+  <% inventories.each do |inventory| %>
+    <tr>
+      <td><%= inventory.fulfillment_center.name %></td>
+      <td><%= link_to inventory.location.name, "#{inventory_path}?scan=#{inventory.location.name}" %></td>
+      <td><%= inventory[:total] %></td>
+      <td><%= link_to "Edit", inventory_edit_path(inventory) %></td>
+    </tr>
+  <% end %>
+</table>
+<% end %>
+
